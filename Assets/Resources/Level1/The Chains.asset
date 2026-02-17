@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38ff1625d87044bcc938310bdd8d0a32, type: 3}
+  m_Name: The Chains
+  m_EditorClassIdentifier: 
+  artistName: Michael Miller
+  artistImage: {fileID: 8667097306301008489, guid: 0d28e0cc825cb4c4ebebdf0b334b2288, type: 3}
+  quality: 375
+  price: 160
+  aiSuspicion: 15
+  isAi: 0
+  artName: The Chains
+  sprite: {fileID: -4670343511508869044, guid: c80433dad3198469cb88485b8cc35315, type: 3}
+  artisticProcess: 'I created this piece within fifteen days of isolated slaving
+    away while listening to my motivational playlist. Which resulted in the jaded
+    creation of The Chains. '
+  mediumMethods: Pencied
+  inspiration: 'I was inspired by my emotional connection between DNA that binds
+    us to the lives we live. I truly believe that once we are born into our situations
+    fate controls us and I hope that comes through within the piece. '
+  widthAndHeight: {x: 100, y: 100}

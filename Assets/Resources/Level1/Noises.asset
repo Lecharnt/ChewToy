@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38ff1625d87044bcc938310bdd8d0a32, type: 3}
+  m_Name: Noises
+  m_EditorClassIdentifier: 
+  artistName: Slick Tiffany
+  artistImage: {fileID: -4947055370025392787, guid: cccff7302fe8048618ba06b0cb0899b6, type: 3}
+  quality: 475
+  price: 255
+  aiSuspicion: 7
+  isAi: 0
+  artName: noises
+  sprite: {fileID: -8532682628840038288, guid: 7b57ad45c1fbd48e7b870299e62238c4, type: 3}
+  artisticProcess: 'I listen to a lot of music! >D This is what it looks like to
+    me! '
+  mediumMethods: 'Acrylic on canvas (visualized through my synesthesia that I have) '
+  inspiration: "For this piece I\u2019ve translated some of my favorite musical pieces
+    ever into painting form. I am the only person in the world capable of this because
+    I have synesthesia and the skills to paint! "
+  widthAndHeight: {x: 100, y: 100}

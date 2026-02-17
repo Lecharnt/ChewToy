@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38ff1625d87044bcc938310bdd8d0a32, type: 3}
+  m_Name: Campfire Stories
+  m_EditorClassIdentifier: 
+  artistName: Lily Stone
+  artistImage: {fileID: 4434188833560433590, guid: 380b3e65fa6054ffd8acc33279edac51, type: 3}
+  quality: 445
+  price: 210
+  aiSuspicion: 4
+  isAi: 0
+  artName: Campfire Stories
+  sprite: {fileID: 2657101804878139067, guid: 17d313a85f3134aed9a2e4b8e0c77cfb, type: 3}
+  artisticProcess: 'Channeling my fear I let the chalk speak for me as I scratched
+    and brushed about. '
+  mediumMethods: Chalk
+  inspiration: "I\u2019ve always had a fear of campfire stories and I don\u2019t
+    know why. They\u2019re supposed to be a relaxing fun pastime with friends but
+    for me it\u2019s always been attached with horror."
+  widthAndHeight: {x: 100, y: 100}

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38ff1625d87044bcc938310bdd8d0a32, type: 3}
+  m_Name: The Puppet Master
+  m_EditorClassIdentifier: 
+  artistName: Mark Sy
+  artistImage: {fileID: -2019635644351435120, guid: 14f8848c170614d99ac6adf0c15a1a1d, type: 3}
+  quality: 390
+  price: 90
+  aiSuspicion: 16
+  isAi: 0
+  artName: The Puppet Master
+  sprite: {fileID: 1878159615922638641, guid: 908ddf38fa5db46c9a78d58e72ca0fd3, type: 3}
+  artisticProcess: I started with my favorite colors and then went on from there.
+    Creating what I felt best was the puppet master.
+  mediumMethods: Paint Splatter
+  inspiration: "I\u2019m inspired by our oppressive, fascist, deplorable government.
+    They are the puppet master that controls our world and does away with any and
+    all of our autonomy."
+  widthAndHeight: {x: 100, y: 100}

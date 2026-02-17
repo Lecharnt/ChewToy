@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38ff1625d87044bcc938310bdd8d0a32, type: 3}
+  m_Name: Cereal
+  m_EditorClassIdentifier: 
+  artistName: Peter Richelson
+  artistImage: {fileID: -8532682628840038288, guid: 7b57ad45c1fbd48e7b870299e62238c4, type: 3}
+  quality: 120
+  price: 140
+  aiSuspicion: 44
+  isAi: 1
+  artName: cereal
+  sprite: {fileID: -524247075735804867, guid: d6142a71ac9b94adcb516a40a6a9d695, type: 3}
+  artisticProcess: "I thought about how to describe this one for a very long time\u2026
+    but I can\u2019t share any more on that."
+  mediumMethods: Digital illustration
+  inspiration: "I am inspired by the thing which is most consistent in my life. At
+    the end of the day there\u2019s only one thing that\u2019s got my back\u2026 "
+  widthAndHeight: {x: 100, y: 100}

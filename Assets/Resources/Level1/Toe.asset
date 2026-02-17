@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38ff1625d87044bcc938310bdd8d0a32, type: 3}
+  m_Name: Toe
+  m_EditorClassIdentifier: 
+  artistName: Carter Busboom
+  artistImage: {fileID: 1878159615922638641, guid: 908ddf38fa5db46c9a78d58e72ca0fd3, type: 3}
+  quality: 275
+  price: 105
+  aiSuspicion: 20
+  isAi: 0
+  artName: I have long studied human anatomy but never have I committed so boldly
+    to any one element of it. I decided to change that with Toe.
+  sprite: {fileID: -6407413717172595465, guid: 352402116e04a4c7983f897e6630dc95, type: 3}
+  artisticProcess: I have long studied human anatomy but never have I committed so
+    boldly to any one element of it. I decided to change that with Toe.
+  mediumMethods: Graffiti
+  inspiration: My fascination with toes has been persistent since my youth. Never
+    yet have I showcased that appreciation within my art. This debut piece will change
+    that as I will have more toe art to come.
+  widthAndHeight: {x: 100, y: 100}

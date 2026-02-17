@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38ff1625d87044bcc938310bdd8d0a32, type: 3}
+  m_Name: Family
+  m_EditorClassIdentifier: 
+  artistName: Felix Garcia
+  artistImage: {fileID: -6768520184679462019, guid: a8565f1ab12c343b1bd06acb1e4a2ca8, type: 3}
+  quality: 125
+  price: 75
+  aiSuspicion: 39
+  isAi: 0
+  artName: Family
+  sprite: {fileID: -7359669818121696709, guid: 27f676d0d17a54effbb126665b1f34b4, type: 3}
+  artisticProcess: "Using the dynamics of my family I tried to etch out a family
+    dinner of ours and how we would interact. The energy is usually very volatile.
+    Charcoal is my trademark but it\u2019s perfect for this piece. "
+  mediumMethods: Charcoal
+  inspiration: "I have a great connection with my family and truly place them above
+    all else. My brothers, sisters and especially my parents appear in this piece.
+    I could\u2019ve never imagined becoming the artist I am today without their influence.
+    This piece isn\u2019t for my honor but in honor of them. "
+  widthAndHeight: {x: 100, y: 100}

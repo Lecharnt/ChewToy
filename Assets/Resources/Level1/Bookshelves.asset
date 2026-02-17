@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38ff1625d87044bcc938310bdd8d0a32, type: 3}
+  m_Name: Bookshelves
+  m_EditorClassIdentifier: 
+  artistName: Libe Rary
+  artistImage: {fileID: -7359669818121696709, guid: 27f676d0d17a54effbb126665b1f34b4, type: 3}
+  quality: 400
+  price: 85
+  aiSuspicion: 30
+  isAi: 0
+  artName: Bookshelves
+  sprite: {fileID: 2221736761330535004, guid: b2d4124f9e37c40cf836dd2519a301ee, type: 3}
+  artisticProcess: My favorite thing in the world is to read! I just wanted to spread
+    the joy!
+  mediumMethods: Acrylic on canvas
+  inspiration: "These are some of my favorite words! I read all the time, so of course
+    I\u2019d paint about it too! "
+  widthAndHeight: {x: 100, y: 100}

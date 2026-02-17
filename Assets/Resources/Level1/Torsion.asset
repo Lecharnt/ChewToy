@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38ff1625d87044bcc938310bdd8d0a32, type: 3}
+  m_Name: Torsion
+  m_EditorClassIdentifier: 
+  artistName: Richard Baker
+  artistImage: {fileID: -3716337861633345523, guid: dd018836d7d2c447990b0794f3d5d0d9, type: 3}
+  quality: 300
+  price: 105
+  aiSuspicion: 31
+  isAi: 0
+  artName: Torsion
+  sprite: {fileID: -5435141606625464636, guid: 0e9ea063076d64fbbb7f99dd98a2ac16, type: 3}
+  artisticProcess: Used only a few different colors of spray paint. Using the overlapping
+    nature of spray paint to create the story behind the word.
+  mediumMethods: Spray Paint
+  inspiration: "My inspiration lies within the ferocity of this word and the power
+    behind it. I\u2019ve been incredibly anxious about what I should submit to this
+    gallery but it came to me in a daze. The power of this word compelled me to work
+    through the night to finish it."
+  widthAndHeight: {x: 100, y: 100}

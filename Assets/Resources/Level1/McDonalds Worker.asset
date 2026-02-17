@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38ff1625d87044bcc938310bdd8d0a32, type: 3}
+  m_Name: McDonalds Worker
+  m_EditorClassIdentifier: 
+  artistName: Martin McMann
+  artistImage: {fileID: 5588565681872591473, guid: 3302ab483c724480c9af8903daf3de0e, type: 3}
+  quality: 240
+  price: 95
+  aiSuspicion: 26
+  isAi: 0
+  artName: 'McDonalds Worker (colorized, circa 2023) '
+  sprite: {fileID: 4434188833560433590, guid: 380b3e65fa6054ffd8acc33279edac51, type: 3}
+  artisticProcess: " I was going on a little walk to take pictures of the trees,
+    but I encountered something even greater\u2026 "
+  mediumMethods: Photography
+  inspiration: "I saw the lonely worker in the distance, feeding the hungry\u2026
+    I knew what needed to be done at that very moment. "
+  widthAndHeight: {x: 100, y: 100}

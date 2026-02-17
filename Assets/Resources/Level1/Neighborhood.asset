@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38ff1625d87044bcc938310bdd8d0a32, type: 3}
+  m_Name: Neighborhood
+  m_EditorClassIdentifier: 
+  artistName: Roger Roger
+  artistImage: {fileID: 2221736761330535004, guid: b2d4124f9e37c40cf836dd2519a301ee, type: 3}
+  quality: 350
+  price: 100
+  aiSuspicion: 35
+  isAi: 1
+  artName: Neighborhood
+  sprite: {fileID: 2994365532515236478, guid: 334339bfec0f946a88692fe5fdd41785, type: 3}
+  artisticProcess: 'Going on walks has long been a daily ritual of mine, with this
+    painting I decided to capture this aspect of my life! I even included my blue
+    car that I have! '
+  mediumMethods: Oil on canvas
+  inspiration: 'This is where I live! I spend a lot of time here, can you spot my
+    home? '
+  widthAndHeight: {x: 100, y: 100}

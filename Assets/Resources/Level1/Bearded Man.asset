@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38ff1625d87044bcc938310bdd8d0a32, type: 3}
+  m_Name: Bearded Man
+  m_EditorClassIdentifier: 
+  artistName: Tyler Barthelmoe
+  artistImage: {fileID: -4518853377557969270, guid: 849550ed2012d47f69137a69bd581579, type: 3}
+  quality: 405
+  price: 175
+  aiSuspicion: 10
+  isAi: 0
+  artName: Bearded Man
+  sprite: {fileID: -6091307369263555809, guid: f1254a68208df4561b70698d14278c3f, type: 3}
+  artisticProcess: "I did my best to paint from memory while on psychedelics they
+    usually help my memory. Although I might\u2019ve gotten carried away with the
+    colors. "
+  mediumMethods: Water Color
+  inspiration: "There was once a beautiful bearded man in my life and you know what,
+    I just wanted to draw him and so I did as best as I could remember him. Hopefully
+    he sees this painting one day and maybe calls me up who knows what\u2019ll happen."
+  widthAndHeight: {x: 100, y: 100}
