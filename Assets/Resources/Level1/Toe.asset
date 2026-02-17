@@ -18,8 +18,7 @@ MonoBehaviour:
   price: 105
   aiSuspicion: 20
   isAi: 0
-  artName: I have long studied human anatomy but never have I committed so boldly
-    to any one element of it. I decided to change that with Toe.
+  artName: Toe
   sprite: {fileID: -6407413717172595465, guid: 352402116e04a4c7983f897e6630dc95, type: 3}
   artisticProcess: I have long studied human anatomy but never have I committed so
     boldly to any one element of it. I decided to change that with Toe.

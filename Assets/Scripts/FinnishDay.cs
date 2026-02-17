@@ -42,7 +42,14 @@ public class FinnishDay : GameModeManagerObject
 
         foreach (ArtObject art in boughtArt)
         {
-            totalScore += art.quality;
+            if (art.isAi)
+            {
+                totalScore -= 1000;
+            }
+            else
+            {
+                totalScore += art.quality;
+            } 
 
             if (art.isAi)
             {
@@ -57,9 +64,9 @@ public class FinnishDay : GameModeManagerObject
 
     private void SetUi()
     {
-        TotalScore.text = "Total Score: " + totalScore;
-        AiOwned.text = "AI Paintings Owned: " + aiCount;
-        RealOwned.text = "Real Paintings Owned: " + realCount;
+        TotalScore.text = $"<#0055CC><b>Score</b>: {totalScore}";
+        AiOwned.text = $"<#CC1111><b>AI Paintings</b>: {aiCount}";
+        RealOwned.text = $"<#00CC00><b>Human Paintings</b>: {realCount}";
     }
 
     public void Continue()

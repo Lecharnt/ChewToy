@@ -26,19 +26,32 @@ public class ArtBuyingGameModeManager : GameModeManagerObject
     public Image QualityFill;
     public Image AiChanceFill;
 
+    public Button acceptButton;
+    public Button rejectButton;
+    public Button backButton;
+    public bool transitioning;
 
 
     public override void StartThisGameMode()
     {
-
+        transitioning = false;
+        acceptButton.interactable = true;
+        rejectButton.interactable = true;
+        backButton.interactable = true;
     }
     private void SetUi()
     {
-        pantingTitle.text = "Art Name: \"" + currentArtWorkStats.artName+"\"";
-        Price.text = "Price: $" + currentArtWorkStats.price;
-        Quality.text = "Quality: " + currentArtWorkStats.quality;
-        AiChance.text = "Ai Chance: " + currentArtWorkStats.aiSuspicion+"%";
-        ArtistInfo.text = "ArtisticProcess: \"" + currentArtWorkStats.artisticProcess+ "\""+ "\nMedium Methods: \"" + currentArtWorkStats.mediumMethods + "\""+ "\nInspiration: \"" + currentArtWorkStats.inspiration + "\"";
+        //pantingTitle.text = "Art Name: \"" + currentArtWorkStats.artName+"\"";
+        pantingTitle.text = $"\"{currentArtWorkStats.artName}\"";
+        Price.text = $"<#00CC00>Price: ${currentArtWorkStats.price}";
+        Quality.text = $"<#0055CC>Quality: {currentArtWorkStats.quality}";
+        AiChance.text = $"<#CC1111>AI Chance: {currentArtWorkStats.aiSuspicion}%";
+        ArtistInfo.text = $"<b>Artistic Process:</b>\n " +
+            $"<#DDDDDD>\"{currentArtWorkStats.artisticProcess}\"</color>\n" +
+            $"<b>Medium Methods:</b>\n " +
+            $"<#DDDDDD>\"{currentArtWorkStats.mediumMethods}\"</color>\n" +
+            $"<b>Inspiration:</b>\n " +
+            $"<#DDDDDD>\"{currentArtWorkStats.inspiration}\"</color>";
 
 
         float ratio1 = Mathf.InverseLerp(0, 1000, (float)currentArtWorkStats.price);
@@ -101,6 +114,14 @@ public class ArtBuyingGameModeManager : GameModeManagerObject
     }
     public void Accepted()
     {
+        if (transitioning)
+        {
+            return;
+        }
+        transitioning = true;
+        acceptButton.interactable = false;
+        rejectButton.interactable = false;
+        backButton.interactable = false;
         boughtArt.Add(currentArtWorkStats);
         Destroy(currentArtWork);
         GoToNextGameMode(GameManager.GameModeType.ART_BUY);
@@ -108,11 +129,27 @@ public class ArtBuyingGameModeManager : GameModeManagerObject
 
     public void Denied()
     {
+        if (transitioning)
+        {
+            return;
+        }
+        transitioning = true;
+        acceptButton.interactable = false;
+        rejectButton.interactable = false;
+        backButton.interactable = false;
         Destroy(currentArtWork);
         GoToNextGameMode(GameManager.GameModeType.ART_BUY);
     }
     public void Back()
     {
+        if (transitioning)
+        {
+            return;
+        }
+        transitioning = true;
+        acceptButton.interactable = false;
+        rejectButton.interactable = false;
+        backButton.interactable = false;
         Destroy(currentArtWork);
         GoToNextGameMode(GameManager.GameModeType.ART_BUY);
     }

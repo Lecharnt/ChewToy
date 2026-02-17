@@ -19,7 +19,7 @@ MonoBehaviour:
   aiSuspicion: 56
   isAi: 1
   artName: Self Portrait
-  sprite: {fileID: 7445350404705897627, guid: 50196a923baea4ecda32d591ee73d2b2, type: 3}
+  sprite: {fileID: 6698470745280482798, guid: 42b5a720efe7647ff8d217fe4f2e9986, type: 3}
   artisticProcess: 'I took a selfie of myself and did my best to recreate the beauty
     my face holds. '
   mediumMethods: Digital painting

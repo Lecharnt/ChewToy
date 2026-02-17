@@ -50,6 +50,8 @@ public class GameManager : MonoBehaviour
         switch (currentGameMode)
         {
             case GameModeType.ART_SHOW:
+                ArtSelectionGameModeManager.artSelectManager.transitioning = false;
+                ArtSelectionGameModeManager.artSelectManager.inspectButton.interactable = true;
                 AudioManager.Instance.PlayMusic(musicTrack1);
                 artSelectioSceneManager.transform.gameObject.SetActive(false);
                 artBuyingSceneManager.transform.gameObject.SetActive(true);
@@ -222,4 +224,8 @@ public class GameManager : MonoBehaviour
         artBuyingSceneManager.ExitGameMode -= switchGameMode;
     }
 
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }

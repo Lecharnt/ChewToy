@@ -6,7 +6,7 @@ public class ButtionScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        ArtSelectionGameModeManager = transform.parent.parent.parent.GetComponent<ArtSelectionGameModeManager>();
+        ArtSelectionGameModeManager = ArtSelectionGameModeManager.artSelectManager;
     }
     public void DoButtionClickStuff()
     {

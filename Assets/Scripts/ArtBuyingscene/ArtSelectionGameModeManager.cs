@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class ArtSelectionGameModeManager : GameModeManagerObject
 {
+    public static ArtSelectionGameModeManager artSelectManager;
     public int amountOfIncounters;
     public List<GameObject> boughtArt;
     public ArtSpawningManager artSpawningManager;
@@ -11,12 +12,24 @@ public class ArtSelectionGameModeManager : GameModeManagerObject
     public GameObject currentArtWorkPrefab;
     public ArtObject currentArtObject;
     public Transform spawnParent;
+    public Button inspectButton;
 
     public ArtObject SelcectedArtObject;
     public List<ArtObject> Art = new List<ArtObject>();
     private bool doOnce = true;
+    public bool transitioning = false;
 
-
+    private void Awake()
+    {
+        if (artSelectManager == null)
+        {
+            artSelectManager = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     public override void StartThisGameMode()
     {
 
@@ -50,9 +63,10 @@ public class ArtSelectionGameModeManager : GameModeManagerObject
 
     public override void ExitThisGameMode()
     {
-        gameModeAnimator.SetTrigger("Exit");
+        //gameModeAnimator.SetTrigger("Exit");
 
     }
+
 
     private void CreateChoice(ArtObject artObject)
     {
@@ -72,13 +86,16 @@ public class ArtSelectionGameModeManager : GameModeManagerObject
     {
         currentArtWork = gameObject;
         currentArtObject = artObject;
-
+        inspectButton.interactable = currentArtObject != null && currentArtObject != null;
     }
-    public void conferm() {
-
-        SelcectedArtObject = currentArtObject;
-        GoToNextGameMode(GameManager.GameModeType.ART_SHOW);
-
+    public void Confirm() {
+        if (currentArtWork != null && currentArtObject != null && !transitioning)
+        {
+            transitioning = true;
+            inspectButton.interactable = false;
+            SelcectedArtObject = currentArtObject;
+            GoToNextGameMode(GameManager.GameModeType.ART_SHOW);
+        } 
     }
 
     public void RemoveElement()
@@ -87,7 +104,7 @@ public class ArtSelectionGameModeManager : GameModeManagerObject
         Art.Remove(removeArt);
         Destroy(currentArtWork);
     }
-    public void GoToFinnish()
+    public void GoToFinish()
     {
         GoToNextGameMode(GameManager.GameModeType.ART_FINNISH);
     }

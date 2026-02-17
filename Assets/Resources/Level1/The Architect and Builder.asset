@@ -19,7 +19,7 @@ MonoBehaviour:
   aiSuspicion: 28
   isAi: 0
   artName: The Architect and Builder
-  sprite: {fileID: -3716337861633345523, guid: dd018836d7d2c447990b0794f3d5d0d9, type: 3}
+  sprite: {fileID: 6326906969115533018, guid: 280fd3e22c169864685080c211432825, type: 3}
   artisticProcess: For this painting I awoke each morning and painted one stroke
     per day. Finally the piece was done after many years. It reminded me that there
     is beauty in every day!

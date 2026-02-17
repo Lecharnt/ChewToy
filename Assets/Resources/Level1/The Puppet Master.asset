@@ -19,7 +19,7 @@ MonoBehaviour:
   aiSuspicion: 16
   isAi: 0
   artName: The Puppet Master
-  sprite: {fileID: 1878159615922638641, guid: 908ddf38fa5db46c9a78d58e72ca0fd3, type: 3}
+  sprite: {fileID: 1595675892563277411, guid: e0af053a2f908e7458b9314499a3f191, type: 3}
   artisticProcess: I started with my favorite colors and then went on from there.
     Creating what I felt best was the puppet master.
   mediumMethods: Paint Splatter
