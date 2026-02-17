@@ -14,18 +14,27 @@ public class ArtBuyingGameModeManager : GameModeManagerObject
 
     public Transform spawnParent;
 
+    [Header("Text")]
     public TextMeshProUGUI pantingTitle;
     public TextMeshProUGUI Price;
     public TextMeshProUGUI Quality;
     public TextMeshProUGUI AiChance;
     public TextMeshProUGUI ArtistInfo;
 
+    [Header("Artist Image (Unused)")]
     public Image Artist;
 
+    [Header("Bars")]
     public Image PriceFill;
     public Image QualityFill;
     public Image AiChanceFill;
 
+    [Header("Frame")]
+    public Image ArtFrame;
+    public Sprite frame1Sprite;
+    public Sprite frame2Sprite;
+
+    [Header("Buttons")]
     public Button acceptButton;
     public Button rejectButton;
     public Button backButton;
@@ -46,9 +55,11 @@ public class ArtBuyingGameModeManager : GameModeManagerObject
         Price.text = $"<#00CC00>Price: ${currentArtWorkStats.price}";
         Quality.text = $"<#0055CC>Quality: {currentArtWorkStats.quality}";
         AiChance.text = $"<#CC1111>AI Chance: {currentArtWorkStats.aiSuspicion}%";
-        ArtistInfo.text = $"<b>Artistic Process:</b>\n " +
+        ArtistInfo.text = $"<b>Artist:</b> " +
+            $"<#DDDDDD>{currentArtWorkStats.artistName}</color>\n" + 
+            $"<b>Artistic Process:</b>\n " +
             $"<#DDDDDD>\"{currentArtWorkStats.artisticProcess}\"</color>\n" +
-            $"<b>Medium Methods:</b>\n " +
+            $"<b>Medium Methods:</b> " +
             $"<#DDDDDD>\"{currentArtWorkStats.mediumMethods}\"</color>\n" +
             $"<b>Inspiration:</b>\n " +
             $"<#DDDDDD>\"{currentArtWorkStats.inspiration}\"</color>";
@@ -106,7 +117,14 @@ public class ArtBuyingGameModeManager : GameModeManagerObject
         RectTransform rt = spawnParent.GetComponent<RectTransform>();
         rt.sizeDelta = currentArtWork.GetComponent<RectTransform>().sizeDelta + new Vector2(16f, 16f);
         currentArtWork.AddComponent<ArtStats>().ArtObject = artObject;
-
+        if ((currentArtWorkStats.artName + currentArtWorkStats.artistName).Length % 2 == 0)
+        {
+            ArtFrame.sprite = frame1Sprite;
+        }
+        else
+        {
+            ArtFrame.sprite = frame2Sprite;
+        }
     }
     private void RevealArt()
     {

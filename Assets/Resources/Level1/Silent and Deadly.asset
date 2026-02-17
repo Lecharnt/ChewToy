@@ -19,7 +19,7 @@ MonoBehaviour:
   aiSuspicion: 21
   isAi: 0
   artName: Silent and Deadly
-  sprite: {fileID: 2629715405930926484, guid: 009354c80d8264cc8893bcffc753b60a, type: 3}
+  sprite: {fileID: 1076020940120650838, guid: 26ef59964eef260428212eecf948e978, type: 3}
   artisticProcess: "It\u2019s always passing us by, I tried to catch some of that
     here. Voila.  "
   mediumMethods: Oil on canvas, real clock hands

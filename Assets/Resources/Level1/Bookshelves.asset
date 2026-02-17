@@ -19,10 +19,10 @@ MonoBehaviour:
   aiSuspicion: 30
   isAi: 0
   artName: Bookshelves
-  sprite: {fileID: 2221736761330535004, guid: b2d4124f9e37c40cf836dd2519a301ee, type: 3}
+  sprite: {fileID: 4767152010133378758, guid: c0c0f63941d36344e90b36f298349b87, type: 3}
   artisticProcess: My favorite thing in the world is to read! I just wanted to spread
     the joy!
   mediumMethods: Acrylic on canvas
   inspiration: "These are some of my favorite words! I read all the time, so of course
-    I\u2019d paint about it too! "
+    I\u2019d paint about it too!"
   widthAndHeight: {x: 100, y: 100}

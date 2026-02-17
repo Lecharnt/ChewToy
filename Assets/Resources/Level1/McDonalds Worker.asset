@@ -18,8 +18,8 @@ MonoBehaviour:
   price: 95
   aiSuspicion: 26
   isAi: 0
-  artName: 'McDonalds Worker (colorized, circa 2023) '
-  sprite: {fileID: 4434188833560433590, guid: 380b3e65fa6054ffd8acc33279edac51, type: 3}
+  artName: McDonalds Worker (colorized, circa 2023)
+  sprite: {fileID: -2942418848430645306, guid: 53dbffa62980ac646a34117103cbb0dd, type: 3}
   artisticProcess: " I was going on a little walk to take pictures of the trees,
     but I encountered something even greater\u2026 "
   mediumMethods: Photography

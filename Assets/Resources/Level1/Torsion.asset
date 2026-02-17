@@ -19,7 +19,7 @@ MonoBehaviour:
   aiSuspicion: 31
   isAi: 0
   artName: Torsion
-  sprite: {fileID: -5435141606625464636, guid: 0e9ea063076d64fbbb7f99dd98a2ac16, type: 3}
+  sprite: {fileID: 8963518511494692015, guid: f28f89ffcde184449acd2cf7dd6e3f75, type: 3}
   artisticProcess: Used only a few different colors of spray paint. Using the overlapping
     nature of spray paint to create the story behind the word.
   mediumMethods: Spray Paint

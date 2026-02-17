@@ -19,7 +19,7 @@ MonoBehaviour:
   aiSuspicion: 7
   isAi: 0
   artName: Noises
-  sprite: {fileID: -8532682628840038288, guid: 7b57ad45c1fbd48e7b870299e62238c4, type: 3}
+  sprite: {fileID: -7876921557444267282, guid: cd4ef34e7196de745a3d24c1af08db38, type: 3}
   artisticProcess: 'I listen to a lot of music! >D This is what it looks like to
     me! '
   mediumMethods: 'Acrylic on canvas (visualized through my synesthesia that I have) '
