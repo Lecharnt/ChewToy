@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
                 artBuyingSceneManager.amountOfIncounters = amountOfIncounters;
                 // Wait until the animation finishes
                 yield return new WaitUntil(() =>
-                    artBuyingSceneManager.gameModeAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f &&
+                    artBuyingSceneManager.gameModeAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.75f &&
                     !artBuyingSceneManager.gameModeAnimator.IsInTransition(0)
                 );
                 artBuyingSceneManager.StartThisGameMode();
@@ -79,11 +79,11 @@ public class GameManager : MonoBehaviour
                 // Code to execute if variableToCheck equals constantValue2
                 artSelectioSceneManager.StartThisGameModeAnimation();
                 artSelectioSceneManager.amountOfIncounters = amountOfIncounters;
-                // Wait until the animation finishes
-                yield return new WaitUntil(() =>
-                    artSelectioSceneManager.gameModeAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f &&
-                    !artSelectioSceneManager.gameModeAnimator.IsInTransition(0)
-                );
+                //// Wait until the animation finishes
+                //yield return new WaitUntil(() =>
+                //    artSelectioSceneManager.gameModeAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f &&
+                //    !artSelectioSceneManager.gameModeAnimator.IsInTransition(0)
+                //);
                 artSelectioSceneManager.StartThisGameMode();
                 break;
             case GameModeType.ART_FINNISH:
@@ -99,11 +99,11 @@ public class GameManager : MonoBehaviour
                 // Code to execute if variableToCheck equals constantValue2
                 finnishDay.StartThisGameModeAnimation();
                 finnishDay.boughtArt = OwnedArt;
-                // Wait until the animation finishes
-                yield return new WaitUntil(() =>
-                    finnishDay.gameModeAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f &&
-                    !finnishDay.gameModeAnimator.IsInTransition(0)
-                );
+                //// Wait until the animation finishes
+                //yield return new WaitUntil(() =>
+                //    finnishDay.gameModeAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f &&
+                //    !finnishDay.gameModeAnimator.IsInTransition(0)
+                //);
                 finnishDay.StartThisGameMode();
                 break;
             // ... more cases ...
@@ -172,7 +172,7 @@ public class GameManager : MonoBehaviour
                 artBuyingSceneManager.EndThisGameModeAnimation();
                 // Wait until the animation finishes
                 yield return new WaitUntil(() =>
-                    artBuyingSceneManager.gameModeAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f &&
+                    artBuyingSceneManager.gameModeAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.75f &&
                     !artBuyingSceneManager.gameModeAnimator.IsInTransition(0)
                 );
                 artBuyingSceneManager.ExitThisGameMode();
@@ -185,11 +185,11 @@ public class GameManager : MonoBehaviour
                 finnishDay.transform.gameObject.SetActive(false);
 
                 artSelectioSceneManager.EndThisGameModeAnimation();
-                // Wait until the animation finishes
-                yield return new WaitUntil(() =>
-                    artSelectioSceneManager.gameModeAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f &&
-                    !artSelectioSceneManager.gameModeAnimator.IsInTransition(0)
-                );
+                //// Wait until the animation finishes
+                //yield return new WaitUntil(() =>
+                //    artSelectioSceneManager.gameModeAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f &&
+                //    !artSelectioSceneManager.gameModeAnimator.IsInTransition(0)
+                //);
                 artSelectioSceneManager.ExitThisGameMode();
                 // Code to execute if variableToCheck equals constantValue2
                 Debug.Log("nolll");
@@ -200,11 +200,11 @@ public class GameManager : MonoBehaviour
                 artSelectioSceneManager.transform.gameObject.SetActive(false);
                 finnishDay.transform.gameObject.SetActive(true);
                 finnishDay.EndThisGameModeAnimation();
-                // Wait until the animation finishes
-                yield return new WaitUntil(() =>
-                    finnishDay.gameModeAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f &&
-                    !finnishDay.gameModeAnimator.IsInTransition(0)
-                );
+                //// Wait until the animation finishes
+                //yield return new WaitUntil(() =>
+                //    finnishDay.gameModeAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f &&
+                //    !finnishDay.gameModeAnimator.IsInTransition(0)
+                //);
                 finnishDay.ExitThisGameMode();
                 // Code to execute if variableToCheck equals constantValue2
                 Debug.Log("pollll");
@@ -222,6 +222,7 @@ public class GameManager : MonoBehaviour
     void OnDestroy()
     {
         artBuyingSceneManager.ExitGameMode -= switchGameMode;
+        artSelectioSceneManager.ExitGameMode -= switchGameMode;
     }
 
     public void ExitGame()

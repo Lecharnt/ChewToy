@@ -27,7 +27,8 @@ public class ArtSelectionGameModeManager : GameModeManagerObject
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(artSelectManager);
+            artSelectManager = this;
         }
     }
     public override void StartThisGameMode()
@@ -87,6 +88,17 @@ public class ArtSelectionGameModeManager : GameModeManagerObject
         currentArtWork = gameObject;
         currentArtObject = artObject;
         inspectButton.interactable = currentArtObject != null && currentArtObject != null;
+        if (currentArtWork != null && currentArtObject != null && !transitioning)
+        {
+            transitioning = true;
+            inspectButton.interactable = false;
+            SelcectedArtObject = currentArtObject;
+            GoToNextGameMode(GameManager.GameModeType.ART_SHOW);
+        }
+        else
+        {
+            Debug.Log($"Current Artwork: {currentArtWork}, Current ArtObject: {currentArtObject}, Transitioning:{transitioning}");
+        }
     }
     public void Confirm() {
         if (currentArtWork != null && currentArtObject != null && !transitioning)
