@@ -8,7 +8,7 @@ public class ArtObject : ScriptableObject
 
 
     public int quality;
-    public double price;
+    public float price;
     public int aiSuspicion;
     public bool isAi;
 

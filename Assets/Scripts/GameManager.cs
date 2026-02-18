@@ -87,9 +87,9 @@ public class GameManager : MonoBehaviour
                 artSelectioSceneManager.StartThisGameMode();
                 break;
             case GameModeType.ART_FINNISH:
-                finnishDay.totalScore = totalScore;
-                finnishDay.aiCount = aiCount;
-                finnishDay.realCount = realCount;
+                //finnishDay.totalScore = totalScore;
+                //finnishDay.aiCount = aiCount;
+                //finnishDay.realCount = realCount;
 
                 AudioManager.Instance.PlayMusic(musicTrack1);
 
@@ -176,7 +176,7 @@ public class GameManager : MonoBehaviour
                     !artBuyingSceneManager.gameModeAnimator.IsInTransition(0)
                 );
                 artBuyingSceneManager.ExitThisGameMode();
-                Debug.Log("cool");
+                //Debug.Log("cool");
                 break; // Exits the switch statement
             case GameModeType.ART_BUY:
 
@@ -192,7 +192,7 @@ public class GameManager : MonoBehaviour
                 //);
                 artSelectioSceneManager.ExitThisGameMode();
                 // Code to execute if variableToCheck equals constantValue2
-                Debug.Log("nolll");
+                //Debug.Log("nolll");
 
                 break;
             case GameModeType.ART_FINNISH:
@@ -207,7 +207,7 @@ public class GameManager : MonoBehaviour
                 //);
                 finnishDay.ExitThisGameMode();
                 // Code to execute if variableToCheck equals constantValue2
-                Debug.Log("pollll");
+                //Debug.Log("pollll");
 
                 break;
             // ... more cases ...

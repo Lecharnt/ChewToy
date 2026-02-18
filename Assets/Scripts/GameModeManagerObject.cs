@@ -28,6 +28,6 @@ public class GameModeManagerObject : MonoBehaviour
     public virtual void GoToNextGameMode(GameManager.GameModeType WhatModeToGoTo)
     {
         ExitGameMode?.Invoke(WhatModeToGoTo);
-        Debug.Log("object go next");
+        //Debug.Log("object go next");
     }
 }
