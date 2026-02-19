@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,11 +20,17 @@ public class ArtSelectionGameModeManager : GameModeManagerObject
     private bool doOnce = true;
     public bool transitioning = false;
 
+    public float expenses;
+    public TMP_Text budgetTracker;
+    public int paintings;
+    public TMP_Text paintingTracker;
+
     private void Awake()
     {
         if (artSelectManager == null)
         {
             artSelectManager = this;
+            expenses = 0;
         }
         else
         {
@@ -55,7 +62,7 @@ public class ArtSelectionGameModeManager : GameModeManagerObject
     {
         Art.Clear();
         Art.AddRange(Resources.LoadAll<ArtObject>(level));
-
+        
     }
     public override void UpdateThisGameMode()
     {
@@ -119,5 +126,13 @@ public class ArtSelectionGameModeManager : GameModeManagerObject
     public void GoToFinish()
     {
         GoToNextGameMode(GameManager.GameModeType.ART_FINNISH);
+    }
+    public void UpdateTrackers(float price)
+    {
+        expenses += price;
+        paintings++;
+        paintingTracker.text = $"<#002ee6>Painting Goal: {paintings}/10";
+        budgetTracker.text = $"<#00e600>Budget: ${expenses}/$1000";
+        //Debug.Log($"Trackers updated: {price}, {expenses}, {paintings}");
     }
 }

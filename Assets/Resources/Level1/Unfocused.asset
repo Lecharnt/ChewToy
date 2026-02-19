@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artistName: xXPentagon_TrinityXx
   artistImage: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  quality: 55
+  quality: 155
   price: 15
   aiSuspicion: 79
   isAi: 1

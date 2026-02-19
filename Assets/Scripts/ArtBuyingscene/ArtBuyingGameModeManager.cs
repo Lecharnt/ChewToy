@@ -140,6 +140,7 @@ public class ArtBuyingGameModeManager : GameModeManagerObject
         acceptButton.interactable = false;
         rejectButton.interactable = false;
         backButton.interactable = false;
+        ArtSelectionGameModeManager.artSelectManager.UpdateTrackers(currentArtWorkStats.price);
         boughtArt.Add(currentArtWorkStats);
         Destroy(currentArtWork);
         GoToNextGameMode(GameManager.GameModeType.ART_BUY);

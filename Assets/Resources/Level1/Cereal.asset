@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artistName: Peter Richelson
   artistImage: {fileID: -8532682628840038288, guid: 7b57ad45c1fbd48e7b870299e62238c4, type: 3}
-  quality: 120
-  price: 140
+  quality: 140
+  price: 80
   aiSuspicion: 44
   isAi: 1
   artName: cereal

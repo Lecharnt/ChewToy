@@ -44,7 +44,7 @@ public class FinnishDay : GameModeManagerObject
                 averageQuality += art.quality;
                 if (art.isAi)
                 {
-                    scrutiny += Mathf.Max((art.aiSuspicion - 5) / 50f, 0) * Mathf.Max((650 - art.quality) / 100f, 0);
+                    scrutiny += Mathf.Clamp01(Mathf.Max((art.aiSuspicion - 5) / 95f, 0) * (0.5f+Mathf.Clamp01(250/art.quality)))*100;
                 }
                 expenses += art.price;
 
@@ -58,6 +58,7 @@ public class FinnishDay : GameModeManagerObject
                 }
             }
             averageQuality /= boughtArt.Count;
+            scrutiny /= boughtArt.Count;
         }
         // exhibit rating calculation 
         float qualityScore = Mathf.Clamp01(averageQuality / 650f) * 5; // quality factor: 5 points
@@ -70,75 +71,88 @@ public class FinnishDay : GameModeManagerObject
             $"Scrutiny Score: {scrutinyScore}\n" +
             $"Quantity Penalty: -{quantityPenalty}");
         TotalScore.text =
-            $"<#ff38fc><b>Exhibit Rating</b>: {exhibitRating.ToString("F1")}/10\n" +
             $"<#0055CC><b>Average Quality</b>: {averageQuality}/650\n" +
             $"<#00CC00><b>Expenses</b>: ${expenses}/$1000\n" +
             $"<#CC1111><b>Scrutiny</b>: {scrutiny.ToString("F1")}%\n" +
-            $"<#e8861e><b>Paintings</b>: {boughtArt.Count}/10";
+            $"<#e8861e><b>Paintings</b>: {boughtArt.Count}/10\n<size=50%>\n</size>" +
+            $"<size=125%><#ff38fc><b>Exhibit Rating</b>: {exhibitRating.ToString("F1")}/10</size>";
         Notes.text = $"<#000000><b><size=150%>Notes:</size></b>\n" +
             GenerateNotes(averageQuality, budgetScore / 4f, scrutinyScore / 1f, quantityPenalty);
 
     }
     //$"<#e8861e><b>AI Paintings</b>: {aiCount}\n" +
     //$"<#aa44cf><b>Human Paintings</b>: {realCount}";
-    private string GenerateNotes(float averageQuality, float budgetScoreRatio, float scrutinyScoreRatio, float quantityPenalty)
+    static readonly string[] RATING_COLORS = { "cc0300", "cc6600", "a69300", "7fa600", "46b000", "00b07b" };
+    private string GenerateNoteString(string text, int rating)
+    {
+        return $"<#{RATING_COLORS[rating]}>- {text}</color>\n";
+    }
+    private string GenerateNotes(float averageQuality, float budgetScoreRatio, float scrutinyScoreRatio, float quantityPenalty, bool debug = false)
     {
         string notes = "";
+        if (debug)
+        {
+            for (int i = 0; i < RATING_COLORS.Length; i++)
+            {
+                notes += GenerateNoteString($"Rating {i}", i);
+            }
+            return notes;
+        }
         switch (averageQuality)
         {
             case < 100:
-                notes += "<#b00300>- Quality was terrible</color>\n";
+                notes += GenerateNoteString("Quality was terrible",0);
                 break;
             case < 200:
-                notes += "<#b05800>- Quality was lacking</color>\n";
+                notes += GenerateNoteString("Quality was lacking", 1);
                 break;
             case < 300:
-                notes += "<#b09b00>- Quality was okay</color>\n";
+                notes += GenerateNoteString("Quality was okay", 2);
                 break;
             case < 400:
-                notes += "<#87b000>- Quality was good</color>\n";
+                notes += GenerateNoteString("Quality was good", 3);
                 break;
             case < 500:
-                notes += "<#46b000>- Quality was excellent</color>\n";
+                notes += GenerateNoteString("Quality was excellent", 4);
                 break;
             default:
-                notes += "<#00b03e>- Quality was exquisite</color>\n";
+                notes += GenerateNoteString("Quality was exquisite", 5);
                 break;
         }
         switch (budgetScoreRatio*100)
         {
             case 0:
-                notes += "<#b00300>- Expenses were extremely overbudget</color>\n";
+                notes += GenerateNoteString("Expenses were extremely overbudget", 0);
                 break;
             case < 33:
-                notes += "<#b05800>- Expenses were way overbudget</color>\n";
+                notes += GenerateNoteString("Expenses were way overbudget", 1);
                 break;
             case < 66:
-                notes += "<#b09b00>- Expenses were overbudget</color>\n";
+                notes += GenerateNoteString("Expenses were overbudget", 2);
                 break;
             case < 100:
-                notes += "<#87b000>- Expenses were slightly overbudget</color>\n";
+                notes += GenerateNoteString("Expenses were slightly overbudget", 3);
                 break;
             case 100:
-                notes += "<#46b000>- Expenses were within the budget</color>\n";
+                notes += GenerateNoteString("Expenses were within the budget", 4);
                 break;
             default:
-                notes += "<#00b03e>- We profitted from the expenses themselves</color>\n";
+                notes += GenerateNoteString("We profitted from the expenses themselves", 5);
                 break;
         }
         switch (scrutinyScoreRatio * 100)
         {
             case 0:
-                notes += "<#b00300>- None of the art pieces seem human-made</color>\n";
+                notes += GenerateNoteString("None of the art pieces seem human-made", 0);
                 break;
             case < 33:
-                notes += "<#b05800>- Some art pieces seem artificial</color>\n";
+                notes += GenerateNoteString("Some art pieces seem artificial", 1);
                 break;
             case < 66:
-                notes += "<#b09b00>- Some art pieces looked suspicious</color>\n";
+                notes += GenerateNoteString("Some art pieces looked suspicious", 2);
                 break;
             case < 100:
-                notes += "<#87b000>- Some art pierces looked off</color>\n";
+                notes += GenerateNoteString("Some art pieces looked off", 3);
                 break;
             default:
                 break;
@@ -146,19 +160,19 @@ public class FinnishDay : GameModeManagerObject
         switch (quantityPenalty)
         {
             case -10:
-                notes = "<#b00300>- I didn't hire you to make a statement, please purchase art.</color>\n";
+                notes = GenerateNoteString("I didn't hire you to make a statement, please purchase art", 0);
                 break;
             case -9:
-                notes += "<#b05800>- One art piece is not sufficient, please purchase more art.</color>\n";
+                notes += GenerateNoteString("One art piece is not sufficient, please purchase more art", 0);
                 break;
             case < -5:
-                notes += "<#b09b00>- Very small exhibit, please purchase more art.</color>\n";
+                notes += GenerateNoteString("Very small exhibit, please purchase more art", 1);
                 break;
             case < -3:
-                notes += "<#87b000>- Small exhibit, please purchase more art.</color>\n";
+                notes += GenerateNoteString("Small exhibit, please purchase more art", 1);
                 break;
             case < 0:
-                notes += "<#46b000>- A few more pieces would've made the exhibit feel complete.</color>\n";
+                notes += GenerateNoteString("Some art pieces looked suspicious", 2);
                 break;
             default:
                 break;
